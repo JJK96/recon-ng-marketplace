@@ -1202,3 +1202,14 @@
   path: reporting/xml
   required_keys: []
   version: '1.1'
+- author: Jan-Jaap Korpershoek (@JJK96)
+  dependencies: []
+  description: Parse LinkedIn people page to find job description.
+  files: []
+  last_updated: '2024-06-28'
+  name: LinkedIn Parser
+  path: recon/profiles-contacts/linkedin
+  required_keys:
+  - linkedin_jsessionid
+  - linkedin_li_at
+  version: '1.0'
