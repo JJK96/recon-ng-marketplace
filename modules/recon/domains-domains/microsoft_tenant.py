@@ -59,10 +59,10 @@ def get_domains(domain):
 class Module(BaseModule, ThreadingMixin):
 
     meta = {
-        'name': 'check_mdi',
+        'name': 'Microsoft tenant',
         'author': 'Northwave',
         'version': '1.0',
-        'description': 'Uses the check_mdi script to get more domains for the given tenant. check_mdi: https://github.com/expl0itabl3/check_mdi',
+        'description': 'Get domains associated with microsoft tenant. Uses the check_mdi script to get more domains for the given tenant. check_mdi: https://github.com/expl0itabl3/check_mdi',
         'query': 'SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL',
         'options': (),
         'files': [],
