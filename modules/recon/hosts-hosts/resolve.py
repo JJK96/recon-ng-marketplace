@@ -21,7 +21,13 @@ class Module(BaseModule, ResolverMixin):
             try:
                 answers = q.query(host)
             except dns.resolver.NXDOMAIN:
-                self.verbose(f"{host} => Unknown")
+                cname = q.canonical_name(host)
+                if str(cname) != host + '.':
+                    self.verbose(f"'{host + '.'}' -> '{cname}'")
+                    note = "CNAME=" + str(cname) + ',takeover?'
+                    self.query('UPDATE hosts SET notes=? WHERE host=?', (note, host))
+                else:
+                    self.verbose(f"{host} => Unknown")
             except dns.resolver.NoAnswer:
                 self.verbose(f"{host} => No answer")
             except (dns.resolver.NoNameservers, dns.resolver.Timeout):
