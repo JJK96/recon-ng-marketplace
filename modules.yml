@@ -1250,3 +1250,13 @@
   - linkedin_jsessionid
   - linkedin_li_at
   version: '1.0'
+- author: Jan-Jaap Korpershoek (@jjk96)
+  dependencies: []
+  description: Gathers information about the Azure AD tenant associated with a domain.
+    In addition to tenant information, it also yields associated domains.
+  files: []
+  last_updated: '2025-09-03'
+  name: AADInternals Tenant information
+  path: recon/domains-multi/aadinternals
+  required_keys: []
+  version: '1.0'
