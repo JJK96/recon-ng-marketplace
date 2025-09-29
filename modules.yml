@@ -1258,5 +1258,13 @@
   last_updated: '2025-09-03'
   name: AADInternals Tenant information
   path: recon/domains-multi/aadinternals
+- author: Jan-Jaap Korpershoek (@JJK96)
+  dependencies: []
+  description: Uses CNAME records of existing hosts to enumerate other Azure resource
+    domains. Loosely based on https://github.com/NetSPI/MicroBurst
+  files: []
+  last_updated: '2025-09-29'
+  name: Find Azure subdomains
+  path: recon/hosts-hosts/azure_subdomains
   required_keys: []
   version: '1.0'
